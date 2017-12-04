@@ -129,18 +129,18 @@
 
 
 
-<meta name="description" content="Lambda表达式 什么是Lambda表达式它常常可以在动态语言中看见，虽然JAVA是静态语言（必须指定类型），但也很巧妙的进行了实现，Lambda表达式是在一个方法中传入另一个方法并获得结果，JAVA在以前的方法中只能是传递对象的引用或者原生基本类型，JDK 8以后也可以传递方法（其本质还是对象)。  Lambda表">
+<meta name="description" content="Lambda表达式 什么是Lambda表达式它常常可以在动态语言中看见，虽然JAVA是静态语言（必须指定类型），但也很巧妙的进行了实现，Lambda表达式是在一个方法中传入另一个方法并获得结果，JAVA在以前的方法中只能是传递对象的引用或者原生基本类型，JDK 8以后也可以传递方法（其本质还是对象)。">
 <meta name="keywords" content="JDK 8">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JDK 8系列 - Lambda表达式">
 <meta property="og:url" content="http://yoursite.com/2017/12/04/Lambda表达式/index.html">
 <meta property="og:site_name" content="藏巧守拙">
-<meta property="og:description" content="Lambda表达式 什么是Lambda表达式它常常可以在动态语言中看见，虽然JAVA是静态语言（必须指定类型），但也很巧妙的进行了实现，Lambda表达式是在一个方法中传入另一个方法并获得结果，JAVA在以前的方法中只能是传递对象的引用或者原生基本类型，JDK 8以后也可以传递方法（其本质还是对象)。  Lambda表达式的语法1() -&amp;gt; &amp;#123;&amp;#125; 左面的括号代表传入的参数">
+<meta property="og:description" content="Lambda表达式 什么是Lambda表达式它常常可以在动态语言中看见，虽然JAVA是静态语言（必须指定类型），但也很巧妙的进行了实现，Lambda表达式是在一个方法中传入另一个方法并获得结果，JAVA在以前的方法中只能是传递对象的引用或者原生基本类型，JDK 8以后也可以传递方法（其本质还是对象)。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-04T06:47:45.000Z">
+<meta property="og:updated_time" content="2017-12-04T06:50:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JDK 8系列 - Lambda表达式">
-<meta name="twitter:description" content="Lambda表达式 什么是Lambda表达式它常常可以在动态语言中看见，虽然JAVA是静态语言（必须指定类型），但也很巧妙的进行了实现，Lambda表达式是在一个方法中传入另一个方法并获得结果，JAVA在以前的方法中只能是传递对象的引用或者原生基本类型，JDK 8以后也可以传递方法（其本质还是对象)。  Lambda表达式的语法1() -&amp;gt; &amp;#123;&amp;#125; 左面的括号代表传入的参数">
+<meta name="twitter:description" content="Lambda表达式 什么是Lambda表达式它常常可以在动态语言中看见，虽然JAVA是静态语言（必须指定类型），但也很巧妙的进行了实现，Lambda表达式是在一个方法中传入另一个方法并获得结果，JAVA在以前的方法中只能是传递对象的引用或者原生基本类型，JDK 8以后也可以传递方法（其本质还是对象)。">
 
 
 
@@ -392,6 +392,7 @@
       
         <h2 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h2><p><br></p>
 <h3 id="什么是Lambda表达式"><a href="#什么是Lambda表达式" class="headerlink" title="什么是Lambda表达式"></a>什么是Lambda表达式</h3><p><br><br>它常常可以在动态语言中看见，虽然JAVA是静态语言（必须指定类型），但也很巧妙的进行了实现，Lambda表达式是在一个方法中传入另一个方法并获得结果，JAVA在以前的方法中只能是传递对象的引用或者原生基本类型，JDK 8以后也可以传递方法（<strong>其本质还是对象</strong>)。</p>
+<a id="more"></a> 
 <p><br></p>
 <h3 id="Lambda表达式的语法"><a href="#Lambda表达式的语法" class="headerlink" title="Lambda表达式的语法"></a>Lambda表达式的语法</h3><p><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">() -&gt; &#123;&#125;</span><br></pre></td></tr></table></figure></p>
 <p><br><br>左面的括号代表传入的参数, 他们用 -&gt; 进行连接， 后面的花括号代表返回的结果，我们程序的执行逻辑可以写在里面。 </p>

@@ -129,18 +129,18 @@
 
 
 
-<meta name="description" content="概述随着时间的增加发现自己很容易忘记很多底层的细节，所以想把它在整理一遍，算是对自己之前学习的回顾。">
+<meta name="description" content="Lambda表达式 什么是Lambda表达式它常常可以在动态语言中看见，虽然JAVA是静态语言（必须指定类型），但也很巧妙的进行了实现，Lambda表达式是在一个方法中传入另一个方法并获得结果，JAVA在以前的方法中只能是传递对象的引用或者原生基本类型，JDK 8以后也可以传递方法（其本质还是对象)。  Lambda表">
 <meta name="keywords" content="JDK 8">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDK 8系列  - 概述">
-<meta property="og:url" content="http://yoursite.com/2017/12/03/JDK8概述/index.html">
+<meta property="og:title" content="JDK 8系列 - Lambda表达式">
+<meta property="og:url" content="http://yoursite.com/2017/12/04/Lambda表达式/index.html">
 <meta property="og:site_name" content="藏巧守拙">
-<meta property="og:description" content="概述随着时间的增加发现自己很容易忘记很多底层的细节，所以想把它在整理一遍，算是对自己之前学习的回顾。">
+<meta property="og:description" content="Lambda表达式 什么是Lambda表达式它常常可以在动态语言中看见，虽然JAVA是静态语言（必须指定类型），但也很巧妙的进行了实现，Lambda表达式是在一个方法中传入另一个方法并获得结果，JAVA在以前的方法中只能是传递对象的引用或者原生基本类型，JDK 8以后也可以传递方法（其本质还是对象)。  Lambda表达式的语法1() -&amp;gt; &amp;#123;&amp;#125; 左面的括号代表传入的参数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-03T02:46:35.000Z">
+<meta property="og:updated_time" content="2017-12-04T06:47:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JDK 8系列  - 概述">
-<meta name="twitter:description" content="概述随着时间的增加发现自己很容易忘记很多底层的细节，所以想把它在整理一遍，算是对自己之前学习的回顾。">
+<meta name="twitter:title" content="JDK 8系列 - Lambda表达式">
+<meta name="twitter:description" content="Lambda表达式 什么是Lambda表达式它常常可以在动态语言中看见，虽然JAVA是静态语言（必须指定类型），但也很巧妙的进行了实现，Lambda表达式是在一个方法中传入另一个方法并获得结果，JAVA在以前的方法中只能是传递对象的引用或者原生基本类型，JDK 8以后也可以传递方法（其本质还是对象)。  Lambda表达式的语法1() -&amp;gt; &amp;#123;&amp;#125; 左面的括号代表传入的参数">
 
 
 
@@ -170,13 +170,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/03/JDK8概述/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/04/Lambda表达式/"/>
 
 
 
 
 
-  <title>JDK 8系列  - 概述 | 藏巧守拙</title>
+  <title>JDK 8系列 - Lambda表达式 | 藏巧守拙</title>
   
 
 
@@ -301,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/03/JDK8概述/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/04/Lambda表达式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="宋喜博【kaeraier】">
@@ -318,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JDK 8系列  - 概述</h1>
+          <h1 class="post-title" itemprop="name headline">JDK 8系列 - Lambda表达式</h1>
         
 
         <div class="post-meta">
@@ -330,8 +330,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-03T10:26:38+08:00">
-                2017-12-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T13:14:31+08:00">
+                2017-12-04
               </time>
             
 
@@ -390,17 +390,18 @@
       
 
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>随着时间的增加发现自己很容易忘记很多底层的细节，所以想把它在整理一遍，算是对自己之前学习的回顾。</p>
-<a id="more"></a> 
-<p>JDK8是JAVA历史上变化很大的一个版本，它在编码风格上多了函数式风格，这使代码更为简洁，表达力更强，让代码拥有描述性。</p>
-<ul>
-<li>Lambda表达式详解</li>
-<li>函数式接口详解</li>
-<li>内部迭代和外部迭代的区别</li>
-<li>Stream详解</li>
-<li>时间新增的API</li>
+        <h2 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h2><p><br></p>
+<h3 id="什么是Lambda表达式"><a href="#什么是Lambda表达式" class="headerlink" title="什么是Lambda表达式"></a>什么是Lambda表达式</h3><p><br><br>它常常可以在动态语言中看见，虽然JAVA是静态语言（必须指定类型），但也很巧妙的进行了实现，Lambda表达式是在一个方法中传入另一个方法并获得结果，JAVA在以前的方法中只能是传递对象的引用或者原生基本类型，JDK 8以后也可以传递方法（<strong>其本质还是对象</strong>)。</p>
+<p><br></p>
+<h3 id="Lambda表达式的语法"><a href="#Lambda表达式的语法" class="headerlink" title="Lambda表达式的语法"></a>Lambda表达式的语法</h3><p><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">() -&gt; &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><br><br>左面的括号代表传入的参数, 他们用 -&gt; 进行连接， 后面的花括号代表返回的结果，我们程序的执行逻辑可以写在里面。 </p>
+<p><br></p>
+<h3 id="Lambda表达式在JAVA中的应用情景"><a href="#Lambda表达式在JAVA中的应用情景" class="headerlink" title="Lambda表达式在JAVA中的应用情景"></a>Lambda表达式在JAVA中的应用情景</h3><ul>
+<li>替换匿名内部类</li>
+<li>事件响应</li>
 </ul>
-<p>在以后我会结合概念和代码来描述以上几个方面，还有我在学习JDK8新特性时遇到的麻烦和解决它们的办法~</p>
+<p><br><br>我们举个应用的例子, Thread在创建的时候传入Runnable对象重写内部的run方法，然后我们给它改造成Lambda表达式的写法, 更改后写法的意思是不传入参数，方法执行打印thread speak, 从这个例子可以看到Lambda表达式在程序表达上更加简便和清晰。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 更改前</span><br><span class="line">Thread thread = new Thread(new Runnable() &#123;</span><br><span class="line">         </span><br><span class="line">         @Override</span><br><span class="line">         public void run() &#123;</span><br><span class="line">         </span><br><span class="line">             System.out.println(&quot;thread speak&quot;);</span><br><span class="line">         </span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 更改后</span><br><span class="line">Thread thread = new Thread(() -&gt; System.out.println(&quot;thread speak&quot;));</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -431,15 +432,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/12/03/JDK8概述/" rel="next" title="JDK 8系列  - 概述">
+                <i class="fa fa-chevron-left"></i> JDK 8系列  - 概述
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/04/Lambda表达式/" rel="prev" title="JDK 8系列 - Lambda表达式">
-                JDK 8系列 - Lambda表达式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -573,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lambda表达式"><span class="nav-number">1.</span> <span class="nav-text">Lambda表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Lambda表达式"><span class="nav-number">1.1.</span> <span class="nav-text">什么是Lambda表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lambda表达式的语法"><span class="nav-number">1.2.</span> <span class="nav-text">Lambda表达式的语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lambda表达式在JAVA中的应用情景"><span class="nav-number">1.3.</span> <span class="nav-text">Lambda表达式在JAVA中的应用情景</span></a></li></ol></li></ol></div>
             
 
           </div>

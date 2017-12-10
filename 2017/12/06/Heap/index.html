@@ -129,18 +129,18 @@
 
 
 
-<meta name="description" content="实现原理Heap是由两部分组成的，一个叫做Heap property, 另一个叫做Shape property两部分组成，它应用在调用程序反复获取队列里的第一个位置，或在某些任务会优先选择特定规则然后执行，可以使用集合进行实现。">
+<meta name="description" content="实现原理Heap是由两部分组成的，一个是Heap property, 另一个叫做Shape property两部分组成，它需要满足插入后还能保证是树的结构，并且取出时根节点是最小的元素。">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Heap">
 <meta property="og:url" content="http://yoursite.com/2017/12/06/Heap/index.html">
 <meta property="og:site_name" content="藏巧守拙">
-<meta property="og:description" content="实现原理Heap是由两部分组成的，一个叫做Heap property, 另一个叫做Shape property两部分组成，它应用在调用程序反复获取队列里的第一个位置，或在某些任务会优先选择特定规则然后执行，可以使用集合进行实现。">
+<meta property="og:description" content="实现原理Heap是由两部分组成的，一个是Heap property, 另一个叫做Shape property两部分组成，它需要满足插入后还能保证是树的结构，并且取出时根节点是最小的元素。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-06T15:01:52.000Z">
+<meta property="og:updated_time" content="2017-12-10T05:13:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Heap">
-<meta name="twitter:description" content="实现原理Heap是由两部分组成的，一个叫做Heap property, 另一个叫做Shape property两部分组成，它应用在调用程序反复获取队列里的第一个位置，或在某些任务会优先选择特定规则然后执行，可以使用集合进行实现。">
+<meta name="twitter:description" content="实现原理Heap是由两部分组成的，一个是Heap property, 另一个叫做Shape property两部分组成，它需要满足插入后还能保证是树的结构，并且取出时根节点是最小的元素。">
 
 
 
@@ -390,9 +390,14 @@
       
 
       
-        <h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p>Heap是由两部分组成的，一个叫做Heap property, 另一个叫做Shape property两部分组成，它应用在调用程序反复获取队列里的第一个位置，或在某些任务会优先选择特定规则然后执行，可以使用集合进行实现。</p>
+        <h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p>Heap是由两部分组成的，一个是Heap property, 另一个叫做Shape property两部分组成，它需要满足插入后还能保证是树的结构，并且取出时根节点是最小的元素。</p>
 <a id="more"></a>
-<p><br><br>Heap property 有插入和获取操作，插入一般为了时间复杂度降低，会放到集合的最后一位，在所有数据插入过后，然后从后到钱进行交换位置，从而保证第一位永远是最小的，获取的时候是拿到的是最小的元素(在第一位)，拿出元素的时候会把最后一位放到第一位按照从上至下的方式进行比对交换找到合适它的位置。<br><br><br>Shape property 代表的是一个树状的结构，它的子节点都会被自己小，如果一个节点的位置是k 那么它的子节点就是 2k和2k+1。</p>
+<p><br></p>
+<h3 id="Heap可以使用集合表现出来"><a href="#Heap可以使用集合表现出来" class="headerlink" title="Heap可以使用集合表现出来"></a>Heap可以使用集合表现出来</h3><ul>
+<li>首先插入时应该从上至下，从左至右按照顺序进行插入，应该保证除了以后一排其余树的节点都是满的，刚开始插入式为了时间复杂度我们可以无需考虑太多</li>
+<li>然后从上至下进行位置的进行交换(和小的进行交换)</li>
+<li>取出时把一个元素进行移出，然后把最后一个更换到第一个位置，在从上至下找到适合它的位置</li>
+</ul>
 
       
     </div>
@@ -569,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现原理"><span class="nav-number">1.</span> <span class="nav-text">实现原理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现原理"><span class="nav-number">1.</span> <span class="nav-text">实现原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Heap可以使用集合表现出来"><span class="nav-number">1.1.</span> <span class="nav-text">Heap可以使用集合表现出来</span></a></li></ol></li></ol></div>
             
 
           </div>

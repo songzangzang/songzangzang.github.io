@@ -300,6 +300,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/12/nio/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋喜博【kaeraier】">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏巧守拙">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/12/nio/" itemprop="url">Nio</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-12T22:56:58+08:00">
+                2017-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/基本功/" itemprop="url" rel="index">
+                    <span itemprop="name">基本功</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="什么是Nio"><a href="#什么是Nio" class="headerlink" title="什么是Nio"></a>什么是Nio</h2><p>Nio是JAVA非阻塞的传输，它有三个部分组成，Selector、Channel、Buffer，在JAVA nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。</p>
+<p><br></p>
+<h2 id="Nio和传统的Io有什么不同"><a href="#Nio和传统的Io有什么不同" class="headerlink" title="Nio和传统的Io有什么不同"></a>Nio和传统的Io有什么不同</h2><p>首先传统的Io流分为输出流和输入流，而且他们都有自己顶层类，拿字节流来说一个是InputStream一个是OutputStream，所以一个数据只能是输出流或者是输入流，而Nio它在处理数据上，Channel既可以是输入流又可以是输出流，比如我们可以使用想使用Channel写入信息，还可以用这个Channel进行数据的读取，关键起作用的是Buffer所以要在相反操作前调用flip方法来进行操作的</p>
+<p>Channel可以理解成Io中的Stream，与Stream不同的就是Channel是双向的，它可以进行读取、写入或是读写。</p>
+<p>由于Channel是双向的，因此它能更好的反应出底层操作的真实情况。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/Stream/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1209,7 +1355,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1220,7 +1366,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1231,7 +1377,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

@@ -129,18 +129,18 @@
 
 
 
-<meta name="description" content="什么是NioNio是JAVA非阻塞的传输，它有三个部分组成，Selector、Channel、Buffer，在JAVA nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。  Nio和传统的Io有什么不">
+<meta name="description" content="什么是NioNio是JAVA非阻塞的传输，它由三个部分组成，Selector、Channel、Buffer，在JAVA Nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。  Nio和传统的Io有什么不">
 <meta name="keywords" content="基本功">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nio">
 <meta property="og:url" content="http://yoursite.com/2017/12/12/nio/index.html">
 <meta property="og:site_name" content="藏巧守拙">
-<meta property="og:description" content="什么是NioNio是JAVA非阻塞的传输，它有三个部分组成，Selector、Channel、Buffer，在JAVA nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。  Nio和传统的Io有什么不同首先传统的Io流分为输出流和输入流，而且他们都有自己顶层类，拿字节流来说一个是">
+<meta property="og:description" content="什么是NioNio是JAVA非阻塞的传输，它由三个部分组成，Selector、Channel、Buffer，在JAVA Nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。  Nio和传统的Io有什么不同首先传统的Io流分为输出流和输入流，而且他们都有自己顶层类，拿字节流来说它的顶">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-12T15:09:51.000Z">
+<meta property="og:updated_time" content="2017-12-12T23:25:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nio">
-<meta name="twitter:description" content="什么是NioNio是JAVA非阻塞的传输，它有三个部分组成，Selector、Channel、Buffer，在JAVA nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。  Nio和传统的Io有什么不同首先传统的Io流分为输出流和输入流，而且他们都有自己顶层类，拿字节流来说一个是">
+<meta name="twitter:description" content="什么是NioNio是JAVA非阻塞的传输，它由三个部分组成，Selector、Channel、Buffer，在JAVA Nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。  Nio和传统的Io有什么不同首先传统的Io流分为输出流和输入流，而且他们都有自己顶层类，拿字节流来说它的顶">
 
 
 
@@ -390,11 +390,14 @@
       
 
       
-        <h2 id="什么是Nio"><a href="#什么是Nio" class="headerlink" title="什么是Nio"></a>什么是Nio</h2><p>Nio是JAVA非阻塞的传输，它有三个部分组成，Selector、Channel、Buffer，在JAVA nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。</p>
+        <h2 id="什么是Nio"><a href="#什么是Nio" class="headerlink" title="什么是Nio"></a>什么是Nio</h2><p>Nio是JAVA非阻塞的传输，它由三个部分组成，Selector、Channel、Buffer，在JAVA Nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。</p>
 <p><br></p>
-<h2 id="Nio和传统的Io有什么不同"><a href="#Nio和传统的Io有什么不同" class="headerlink" title="Nio和传统的Io有什么不同"></a>Nio和传统的Io有什么不同</h2><p>首先传统的Io流分为输出流和输入流，而且他们都有自己顶层类，拿字节流来说一个是InputStream一个是OutputStream，所以一个数据只能是输出流或者是输入流，而Nio它在处理数据上，Channel既可以是输入流又可以是输出流，比如我们可以使用想使用Channel写入信息，还可以用这个Channel进行数据的读取，关键起作用的是Buffer所以要在相反操作前调用flip方法来进行操作的</p>
-<p>Channel可以理解成Io中的Stream，与Stream不同的就是Channel是双向的，它可以进行读取、写入或是读写。</p>
+<h2 id="Nio和传统的Io有什么不同"><a href="#Nio和传统的Io有什么不同" class="headerlink" title="Nio和传统的Io有什么不同"></a>Nio和传统的Io有什么不同</h2><p>首先传统的Io流分为输出流和输入流，而且他们都有自己顶层类，拿字节流来说它的顶层类一个是InputStream一个是OutputStream，所以对数据操作时这个数据只能是输出流或者是输入流，而Nio它在处理数据上，Channel既可以是输入流又可以是输出流，比如我们可以使用想使用Channel写入信息，还可以用这个Channel进行数据的读取，关键起作用的是Buffer所以要在相反操作前调用flip方法来进行操作的</p>
+<p><br></p>
+<h2 id="Channel做了什么"><a href="#Channel做了什么" class="headerlink" title="Channel做了什么"></a>Channel做了什么</h2><p>Channel可以理解成Io中的Stream，与Stream不同的就是Channel是双向的，它可以进行读取、写入或是读写。</p>
 <p>由于Channel是双向的，因此它能更好的反应出底层操作的真实情况。</p>
+<p><br></p>
+<h2 id="Buffer-做了什么"><a href="#Buffer-做了什么" class="headerlink" title="Buffer 做了什么"></a>Buffer 做了什么</h2><p>Buffer在Nio中是很重要的一环，数据的读写都是依靠它来进行的，它对原生数据类型除了boolean都提供了相应的Buffer对象，在操作数据时应该使用相应的Buffer来进行处理，控制Buffer主要是依靠三个属性来进行操作的。</p>
 
       
     </div>
@@ -567,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Nio"><span class="nav-number">1.</span> <span class="nav-text">什么是Nio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nio和传统的Io有什么不同"><span class="nav-number">2.</span> <span class="nav-text">Nio和传统的Io有什么不同</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Nio"><span class="nav-number">1.</span> <span class="nav-text">什么是Nio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nio和传统的Io有什么不同"><span class="nav-number">2.</span> <span class="nav-text">Nio和传统的Io有什么不同</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Channel做了什么"><span class="nav-number">3.</span> <span class="nav-text">Channel做了什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Buffer-做了什么"><span class="nav-number">4.</span> <span class="nav-text">Buffer 做了什么</span></a></li></ol></div>
             
 
           </div>

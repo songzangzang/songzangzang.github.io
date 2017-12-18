@@ -137,7 +137,7 @@
 <meta property="og:site_name" content="藏巧守拙">
 <meta property="og:description" content="Buffer 的组成Buffer容器中装入的是明确的原始类型数据，决定一个Buffer的必要条件就是，capacity, limit 和 position。 capacity是Buffer的最大容量，它不能是负数，并且它不能被更改。 limit 它是限制元素的索引值，它不能是负数并且它不能大于capacity。 position的位置是下一个元素读或者写的位置，它不能是负数，并且它不能大于limi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-18T02:55:36.000Z">
+<meta property="og:updated_time" content="2017-12-18T02:57:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nio - Buffer详解">
 <meta name="twitter:description" content="Buffer 的组成Buffer容器中装入的是明确的原始类型数据，决定一个Buffer的必要条件就是，capacity, limit 和 position。 capacity是Buffer的最大容量，它不能是负数，并且它不能被更改。 limit 它是限制元素的索引值，它不能是负数并且它不能大于capacity。 position的位置是下一个元素读或者写的位置，它不能是负数，并且它不能大于limi">
@@ -394,6 +394,7 @@
 <p>capacity是Buffer的最大容量，它不能是负数，并且它不能被更改。</p>
 <p>limit 它是限制元素的索引值，它不能是负数并且它不能大于capacity。</p>
 <p>position的位置是下一个元素读或者写的位置，它不能是负数，并且它不能大于limit。</p>
+<a id="more"></a>
 <p><br></p>
 <h2 id="Buffer中的方法"><a href="#Buffer中的方法" class="headerlink" title="Buffer中的方法"></a>Buffer中的方法</h2><h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><p>准备向序列中read读入或者使用put方法进行放入，调用clean方法会把position置为0，limit等于capacity, 把mark置为-1</p>
 <h3 id="flip"><a href="#flip" class="headerlink" title="flip"></a>flip</h3><p>序列准备使用通道write或者get进行获取，它会把limit设置成当前的position, 之后吧position设置成0</p>

@@ -129,18 +129,18 @@
 
 
 
-<meta name="description" content="什么是NioNio是JAVA非阻塞的传输，它由三个部分组成，Selector、Channel、Buffer，在JAVA Nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。  Nio和传统的Io有什么不">
+<meta name="description" content="什么是NioNio是JAVA非阻塞的传输，它由三个部分组成，Selector、Channel、Buffer，在JAVA Nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。">
 <meta name="keywords" content="基本功">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nio">
 <meta property="og:url" content="http://yoursite.com/2017/12/12/nio/index.html">
 <meta property="og:site_name" content="藏巧守拙">
-<meta property="og:description" content="什么是NioNio是JAVA非阻塞的传输，它由三个部分组成，Selector、Channel、Buffer，在JAVA Nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。  Nio和传统的Io有什么不同首先传统的Io流分为输出流和输入流，而且他们都有自己顶层类，拿字节流来说它的顶">
+<meta property="og:description" content="什么是NioNio是JAVA非阻塞的传输，它由三个部分组成，Selector、Channel、Buffer，在JAVA Nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-12T23:25:55.000Z">
+<meta property="og:updated_time" content="2017-12-18T02:59:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nio">
-<meta name="twitter:description" content="什么是NioNio是JAVA非阻塞的传输，它由三个部分组成，Selector、Channel、Buffer，在JAVA Nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。  Nio和传统的Io有什么不同首先传统的Io流分为输出流和输入流，而且他们都有自己顶层类，拿字节流来说它的顶">
+<meta name="twitter:description" content="什么是NioNio是JAVA非阻塞的传输，它由三个部分组成，Selector、Channel、Buffer，在JAVA Nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。">
 
 
 
@@ -391,6 +391,7 @@
 
       
         <h2 id="什么是Nio"><a href="#什么是Nio" class="headerlink" title="什么是Nio"></a>什么是Nio</h2><p>Nio是JAVA非阻塞的传输，它由三个部分组成，Selector、Channel、Buffer，在JAVA Nio中，我们是面向块（block）或者缓冲区（Buffer）进行编程的，Buffer本身就是一块内存，在底层实现上，它是一个数组，数据读写都是依靠Buffer来实现的。</p>
+<a id="more"></a>
 <p><br></p>
 <h2 id="Nio和传统的Io有什么不同"><a href="#Nio和传统的Io有什么不同" class="headerlink" title="Nio和传统的Io有什么不同"></a>Nio和传统的Io有什么不同</h2><p>首先传统的Io流分为输出流和输入流，而且他们都有自己顶层类，拿字节流来说它的顶层类一个是InputStream一个是OutputStream，所以对数据操作时这个数据只能是输出流或者是输入流，而Nio它在处理数据上，Channel既可以是输入流又可以是输出流，比如我们可以使用想使用Channel写入信息，还可以用这个Channel进行数据的读取，关键起作用的是Buffer所以要在相反操作前调用flip方法来进行操作的</p>
 <p><br></p>

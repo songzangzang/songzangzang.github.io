@@ -342,6 +342,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/飞鸽传书/" itemprop="url" rel="index">
+                    <span itemprop="name">飞鸽传书</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -370,12 +392,14 @@
 
       
         
-          
-            <h3 id="Channel-是什么"><a href="#Channel-是什么" class="headerlink" title="Channel 是什么"></a>Channel 是什么</h3><p>Channel可以代表连接的通道，它有点类似于IO中的Stream，Channel和Stream之间的不同在于，Stream只可以是单向的，比如说InputStream只能进行读取，OutputStream只能进行输出，但是Channel不同它可以进行双向操作，也就是说一个Channel可以进行读写操作，它对数据进行读写时，会先把数据存放到ByteBuffer中，写出时也同样是使用ByteBuffer来对数据进行操作的。</p>
-<h3 id="Channel的使用"><a href="#Channel的使用" class="headerlink" title="Channel的使用"></a>Channel的使用</h3><p>Channel在Nio是必不可缺的一部分，如果在我们面临的业务场景是大量并发请求并且每次携带的信息量都很小的情况，那么我们可以搭配Selector一起进行使用，在Java底层会使用一个线程来处理这些请求，大大减少了上下文之间的切换，这个就是基于异步和事件来完成的，Netty的底层对Nio进行很好的封装，并解决了select()方法无法返回等一些bug，还在设计上使用Reactor模型进行了支持，所以去了解底层Channel是很有必要的</p>
-<h3 id="Channel使用的注意"><a href="#Channel使用的注意" class="headerlink" title="Channel使用的注意"></a>Channel使用的注意</h3><p>在前面说到Channel可以使用Selector进行管理，但是FileChannel并不能使用Selector，因为它没有对Selector的抽象类进行实现，所以无法使用事件模型（也就是说无法进行异步操作），这的设计也和IO流有相似的分类，作者都是把文件相关的IO操作和Socket的IO操作区分出两套的类继承体系</p>
-
-          
+          <h3 id="Channel-是什么"><a href="#Channel-是什么" class="headerlink" title="Channel 是什么"></a>Channel 是什么</h3><p>Channel可以代表连接的通道，它有点类似于IO中的Stream，Channel和Stream之间的不同在于，Stream只可以是单向。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/27/Channel/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -476,8 +500,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/基本功/" itemprop="url" rel="index">
-                    <span itemprop="name">基本功</span>
+                  <a href="/categories/飞鸽传书/" itemprop="url" rel="index">
+                    <span itemprop="name">飞鸽传书</span>
                   </a>
                 </span>
 
@@ -610,6 +634,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/飞鸽传书/" itemprop="url" rel="index">
+                    <span itemprop="name">飞鸽传书</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -638,19 +684,15 @@
 
       
         
-          
-            <h2 id="基本通信流程"><a href="#基本通信流程" class="headerlink" title="基本通信流程"></a>基本通信流程</h2><h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><ol>
-<li>创建一个ServerSocker<br>   ServerSocket serverSocker = new ServerSocker();</li>
-<li>指定端口号<br>   InetSocketAddress address = new InetSocketAddress(9999);</li>
-<li>绑定端口号<br>  serverSocket.bind(address);</li>
-<li>等待接收数据(阻塞状态)<br>  Socket socket = serverSocker.accept();<br>  Socket.getInputStream();……</li>
-</ol>
-<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><ol>
-<li>创建Socker并指定IP地址和端口号<br>   Socket socker = new Socket(“lcoalhost”, 9999);</li>
-<li>获得输出流并进行输出<br>   OutpustStream os = socket.getOutputStream();<br>   os.write(…);<br>   os.flush();   </li>
-</ol>
-
-          
+          <h2 id="基本通信流程"><a href="#基本通信流程" class="headerlink" title="基本通信流程"></a>基本通信流程</h2><h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><ol>
+<li>创建一个ServerSocker<br>   ServerSocket serverSocker = new ServerSocker();
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/30/Socket通信流程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -751,8 +793,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/基本功/" itemprop="url" rel="index">
-                    <span itemprop="name">基本功</span>
+                  <a href="/categories/飞鸽传书/" itemprop="url" rel="index">
+                    <span itemprop="name">飞鸽传书</span>
                   </a>
                 </span>
 
@@ -900,8 +942,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/基本功/" itemprop="url" rel="index">
-                    <span itemprop="name">基本功</span>
+                  <a href="/categories/飞鸽传书/" itemprop="url" rel="index">
+                    <span itemprop="name">飞鸽传书</span>
                   </a>
                 </span>
 
